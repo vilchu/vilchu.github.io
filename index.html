@@ -46,6 +46,26 @@
       text-align: center;
       padding: 1rem;
     }
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .column {
+      background-color: #ffe4ec;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .column a {
+      text-decoration: none;
+      color: #a84a78;
+      font-weight: bold;
+      display: block;
+      margin-top: 0.5rem;
+    }
     .hidden {
       display: none;
     }
@@ -71,22 +91,42 @@
 </head>
 <body>
   <header>
-    <h2>My Pastel Site</h2>
-    <a href="#" class="nav-link" onclick="togglePage()">About Me</a>
+    <h2>My CSS snippet collection</h2>
+    <a href="#" class="nav-link" onclick="togglePage()">Snippets</a>
   </header>
 
   <div id="home" class="container">
     <img src="https://via.placeholder.com/150" alt="Profile Image" class="profile-img" />
     <div class="content">
       <h1>Welcome!</h1>
-      <p>This is a cute pastel-themed landing page with a round profile image. 🌸💖✨</p>
+      <p>I'm Vilchu, an amateur snippeter, here are few my theme snippets, where I take no credit for anything atall🌸💖✨</p>
     </div>
   </div>
 
   <div id="about" class="container hidden">
     <div class="content">
-      <h1>About Me</h1>
-      <p>Here you can write something sweet and simple about yourself or your work. Maybe even a few hobbies? 🎨🎮🐾</p>
+      <h1>Snippets</h1>
+      <p>Here's my collection of Discord snippets and some other codes</p>
+      <div class="columns">
+        <div class="column">
+          <p>smallerFixes</p>
+          <a href="https://github.com/vilchu/smallerFixes/blob/main/SmallerFixes.css" target="_blank">View</a>
+        </div>
+        <div class="column">
+          <p>DiscordIcons</p>
+          <a href="https://github.com/vilchu/DiscordIcons/blob/main/DiscordIcons" target="_blank">Read</a>
+        </div>
+        <div class="column">
+          <p>AHK</p>
+          <a href="https://github.com/vilchu/AHK" target="_blank">Gallery</a>
+        </div>
+        <div class="column">
+          <p>Contact Me</p>
+          <a href="mailto:your.email@example.com">Email</a>
+        </div>
+      </div>
+        
+      </div>
     </div>
   </div>
 
