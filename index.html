@@ -58,7 +58,7 @@
     }
 
     .hidden {
-      display: none;
+      display: none !important;
     }
 
     .profile-img {
@@ -128,7 +128,7 @@
       text-shadow: 0 0 5px #f8aab9;
     }
 
-    /* Shimmer effect just for the 'Soon' link */
+    /* Shimmer effect for 'Soon' link */
     .soon a {
       position: relative;
       overflow: hidden;
@@ -157,24 +157,38 @@
     }
 
     .back-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #ffd1dc;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-weight: bold;
-      color: #a84a78;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      display: none;
-      transition: background-color 0.3s;
-    }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffd1dc;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-weight: bold;
+  color: #a84a78;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  gap: 4px;
+  font-size: 0.8rem;
+}
+
 
     .back-button:hover {
       background-color: #f8aab9;
+      transform: scale(1.05);
+    }
+
+    .back-icon {
+      width: 24px;
+      height: 24px;
+      margin-left: -8px; /* tweak this value as needed */
     }
   </style>
 </head>
@@ -190,7 +204,7 @@
     <div class="content">
       <h1>Welcome!</h1>
       <p>I'm <strong>Vilchu</strong>, an amateur snippeter, here are few of my theme snippets,<br> I don't take any credit for them. 🌸💖✨</p>
-      <a href="https://en.pronouns.page/@vilchu" target="_blank" class="about-button">About Me ❤︎</a>
+      <a href="https://en.pronouns.page/@vilchu" target="_blank" class="about-button">About Me</a>
     </div>
   </div>
 
@@ -220,8 +234,11 @@
     </div>
   </div>
 
-  <!-- Back Button -->
-  <button id="backButton" class="back-button" onclick="goBackHome()">Back</button>
+  <!-- Back Button (bigger & centered!) -->
+  <button id="backButton" class="back-button hidden" onclick="goBackHome()">
+    <img src="arrow_.png" alt="Back" class="back-icon" />
+    
+  </button>
 
   <script>
     function fadeOut(element, callback) {
@@ -244,7 +261,7 @@
         setTimeout(() => {
           about.style.opacity = 1;
         }, 10);
-        backButton.style.display = "block";
+        backButton.classList.remove("hidden");
       });
     }
 
@@ -259,7 +276,7 @@
         setTimeout(() => {
           home.style.opacity = 1;
         }, 10);
-        backButton.style.display = "none";
+        backButton.classList.add("hidden");
       });
     }
   </script>
