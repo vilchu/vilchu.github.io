@@ -22,7 +22,7 @@
       text-decoration: none;
       color: #a84a78;
       font-weight: bold;
-      transition: colour 0.3s;
+      transition: color 0.3s;
     }
     .nav-link:hover {
       color: #7e2b52;
@@ -49,6 +49,24 @@
     .hidden {
       display: none;
     }
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffd1dc;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-weight: bold;
+      color: #a84a78;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: none;
+    }
+    .back-button:hover {
+      background-color: #f8aab9;
+    }
   </style>
 </head>
 <body>
@@ -72,12 +90,22 @@
     </div>
   </div>
 
+  <button id="backButton" class="back-button" onclick="togglePage()">Back</button>
+
   <script>
     function togglePage() {
       const home = document.getElementById("home");
       const about = document.getElementById("about");
+      const backButton = document.getElementById("backButton");
+
       home.classList.toggle("hidden");
       about.classList.toggle("hidden");
+
+      if (!home.classList.contains("hidden")) {
+        backButton.style.display = "none";
+      } else {
+        backButton.style.display = "block";
+      }
     }
   </script>
 </body>
