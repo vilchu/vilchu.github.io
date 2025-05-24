@@ -12,6 +12,12 @@
       background-color: #fceef5;
       color: #333;
       transition: background-color 0.5s ease;
+      animation: fadeInBody 0.6s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     header {
@@ -72,6 +78,12 @@
       margin-top: 2rem;
     }
 
+    @media (max-width: 600px) {
+      .columns {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .column {
       background-color: #ffe4ec;
       padding: 1rem;
@@ -86,6 +98,39 @@
       font-weight: bold;
       display: block;
       margin-top: 0.5rem;
+      transition: 0.3s;
+    }
+
+    .column a:hover {
+      text-shadow: 0 0 5px #f8aab9;
+    }
+
+    /* Shimmer effect just for the 'Soon' link */
+    .soon a {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .soon a::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+      );
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      100% {
+        left: 125%;
+      }
     }
 
     .back-button {
@@ -121,7 +166,7 @@
     <img src="MenheraHearts.png" alt="Profile Image" class="profile-img" />
     <div class="content">
       <h1>Welcome!</h1>
-      <p>I'm <strong>Vilchu</strong>, an amateur snippeter, here are few of my theme snippets,<br> I don't take any credit for them.🌸💖✨</p>
+      <p>I'm <strong>Vilchu</strong>, an amateur snippeter, here are few of my theme snippets,<br> I don't take any credit for them. 🌸💖✨</p>
     </div>
   </div>
 
@@ -143,7 +188,7 @@
           <p>AHK</p>
           <a href="https://github.com/vilchu/AHK" target="_blank">View</a>
         </div>
-        <div class="column">
+        <div class="column soon">
           <p>Soon</p>
           <a href="https://github.com/vilchu" target="_blank">Soon</a>
         </div>
