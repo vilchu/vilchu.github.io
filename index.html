@@ -4,10 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vilchu's CSS snippet collection</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <header>
     <h2>My CSS snippet collection</h2>
@@ -16,11 +15,11 @@
 
   <!-- Home Page -->
   <div id="home" class="container">
-    <img src="assets/pfps/vilchupfp.png" alt="Profile Image" class="profile-img" />
+    <img id="pfp" src="" alt="Profile Image" class="profile-img" />
+    <h2 id="username"></h2>
     <div class="content">
-      <h1>Welcome!</h1>
-      <p><font size="5"><strong>Hellooo!!<br></strong></font>I'm <strong>Vilchu✨</strong>, an amateur snippeter, here are few of snippets for my theme(s) and some other codes.<br><u>I don't take any credits for them</u>💖<br>I just love a neat looking Discord 🌸</p>
-      <a href="https://en.pronouns.page/@vilchu" target="_blank" class="aboutme-button">About Me ❤︎</a>
+      <p id="bio"></p>
+      <a id="about-link" class="aboutme-button" target="_blank">About Me ❤︎</a>  
     </div>
   </div>
 
@@ -28,25 +27,8 @@
   <div id="snippets" class="container hidden">
     <div class="content">
       <h1>Snippets</h1>
-      <p>Here's my collection of Discord snippets and some other codes</p>
-      <div class="columns">
-        <div class="column">
-          <p>smallerFixes</p>
-          <a href="https://vilchu.github.io/smallerFixes/smallerFixes.theme.css" target="_blank">View</a>
-        </div>
-        <div class="column">
-          <p>DiscordIcons</p>
-          <a href="https://vilchu.github.io/DiscordIcons/DiscordIcons.theme.css" target="_blank">View</a>
-        </div>
-        <div class="column">
-          <p>AHK</p>
-          <a href="https://github.com/vilchu/AHK" target="_blank">View</a>
-        </div>
-        <div class="column soon">
-          <p>Soon</p>
-          <a href="https://github.com/vilchu" target="_blank">Soon</a>
-        </div>
-      </div>
+      <p>Here's my collection of Discord theme snippets and some other codes</p>
+      <div id="snippetsContainer" class="columns"></div>
     </div>
   </div>
 
@@ -54,7 +36,13 @@
   <button id="backButton" class="back-button hidden" onclick="goBackHome()">
     <img src="assets/icons/arrow_.png" alt="Back" class="back-icon" />
   </button>
-<script src="index.js"></script>
-</body>
 
+  <script src="index.js"></script>
+
+  <div id="error-message" class="error hidden">
+  ⚠️ Oops! Something went wrong while loading your data.<br>
+  Please open this site using <strong>Live Server</strong> or upload it to GitHub Pages!
+</div>
+
+</body>
 </html>
