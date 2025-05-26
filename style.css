@@ -132,11 +132,17 @@ header {
   margin: 2rem auto;
 }
 
+.snippet-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #a84a78;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 #snippetsContainer {
   display: block;
 }
-
-
 
 .soon a {
     position: relative;
