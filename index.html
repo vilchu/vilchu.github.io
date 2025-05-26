@@ -199,7 +199,7 @@
 <body>
   <header>
     <h2>My CSS snippet collection</h2>
-    <a href="#" class="nav-link" onclick="goToAbout()">Snippets</a>
+    <a href="#" class="nav-link" onclick="goToSnippets()">Snippets</a>
   </header>
 
   <!-- Home Page -->
@@ -253,16 +253,16 @@
       }, 500);
     }
 
-    function goToAbout() {
+    function goToSnippets() {
       const home = document.getElementById("home");
-      const about = document.getElementById("snippets");
+      const snippets = document.getElementById("snippets");
       const backButton = document.getElementById("backButton");
 
       fadeOut(home, () => {
-        about.classList.remove("hidden");
-        about.style.opacity = 0;
+        snippets.classList.remove("hidden");
+        snippets.style.opacity = 0;
         setTimeout(() => {
-          about.style.opacity = 1;
+          snippets.style.opacity = 1;
         }, 10);
         backButton.classList.remove("hidden");
       });
@@ -270,10 +270,10 @@
 
     function goBackHome() {
       const home = document.getElementById("home");
-      const about = document.getElementById("snippets");
+      const snippets = document.getElementById("snippets");
       const backButton = document.getElementById("backButton");
 
-      fadeOut(about, () => {
+      fadeOut(snippets, () => {
         home.classList.remove("hidden");
         home.style.opacity = 0;
         setTimeout(() => {
