@@ -1,0 +1,25 @@
+{
+  "welcomeMessage": "Welcome",
+  "username": "Vilchu",
+  "bio": "<font size='4'><strong>Hellooo!!<br></strong></font>I'm Vilchu✨, an amateur snippeter. Here are a few snippets for my themes, as well as some of my other codes.<br><u>I don't take any credit for them</u>💖<br> I just love a neat-looking Discord!🌸",
+  "pfp": "assets/pfps/vilchupfp.png",
+  "aboutMeLink": "https://en.pronouns.page/@vilchu",
+  "snippets": [
+    {
+      "name": "smallerFixes",
+      "url": "https://vilchu.github.io/smallerFixes/smallerFixes.theme.css"
+    },
+    {
+      "name": "DiscordIcons",
+      "url": "https://vilchu.github.io/DiscordIcons/DiscordIcons.theme.css"
+    },
+    {
+      "name": "AHK",
+      "url": "https://github.com/vilchu/AHK"
+    },
+    {
+      "name": "Soon",
+      "url": "https://github.com/vilchu"
+    }
+  ]
+}
