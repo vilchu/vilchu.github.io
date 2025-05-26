@@ -126,6 +126,18 @@ header {
     text-shadow: 0 0 5px #f8aab9;
 }
 
+.snippet-section {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+#snippetsContainer {
+  display: block;
+}
+
+
+
 .soon a {
     position: relative;
     overflow: hidden;
