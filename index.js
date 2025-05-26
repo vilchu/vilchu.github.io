@@ -35,4 +35,4 @@
       }, 10);
       backButton.classList.add("hidden");
     });
-  }
+}
