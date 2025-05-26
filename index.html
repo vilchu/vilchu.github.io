@@ -82,7 +82,7 @@
       padding: 1rem;
     }
 
-    .about-button {
+    .aboutme-button {
       margin-top: 1rem;
       display: inline-block;
       background-color: #ffd1dc;
@@ -95,7 +95,7 @@
       transition: background-color 0.3s, transform 0.2s;
     }
 
-    .about-button:hover {
+    .aboutme-button:hover {
       background-color: #f8aab9;
       transform: scale(1.05);
     }
@@ -208,12 +208,12 @@
     <div class="content">
       <h1>Welcome!</h1>
       <p><font size="5"><strong>Hellooo!!<br></strong></font>I'm <strong>Vilchu✨</strong>, an amateur snippeter, here are few of snippets for my theme(s) and some other codes.<br><u>I don't take any credits for them</u>💖<br>I just love a neat looking Discord 🌸</p>
-      <a href="https://en.pronouns.page/@vilchu" target="_blank" class="about-button">About Me ❤︎</a>
+      <a href="https://en.pronouns.page/@vilchu" target="_blank" class="aboutme-button">About Me ❤︎</a>
     </div>
   </div>
 
-  <!-- About Page -->
-  <div id="about" class="container hidden">
+  <!-- Snippets Page -->
+  <div id="snippets" class="container hidden">
     <div class="content">
       <h1>Snippets</h1>
       <p>Here's my collection of Discord snippets and some other codes</p>
@@ -255,7 +255,7 @@
 
     function goToAbout() {
       const home = document.getElementById("home");
-      const about = document.getElementById("about");
+      const about = document.getElementById("snippets");
       const backButton = document.getElementById("backButton");
 
       fadeOut(home, () => {
@@ -270,7 +270,7 @@
 
     function goBackHome() {
       const home = document.getElementById("home");
-      const about = document.getElementById("about");
+      const about = document.getElementById("snippets");
       const backButton = document.getElementById("backButton");
 
       fadeOut(about, () => {
