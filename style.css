@@ -11,6 +11,12 @@ body {
     cursor: url("assets/icons/donut_Normal.cur"), auto;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
 button,
 a,
 .aboutme-button,
