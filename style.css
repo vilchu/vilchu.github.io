@@ -1,4 +1,4 @@
-body * {
+body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     background-color: #fceef5;
@@ -10,8 +10,15 @@ body * {
   display: flex;
   flex-direction: column;
 
-    cursor: url("assets/icons/donut_Normal.cur"), auto;
 }
+
+body {
+  min-height: 100vh;
+  background-color: #fceef5;
+  cursor: url("assets/icons/donut_Normal.cur"), auto;
+}
+
+
 
 button,
 a,
