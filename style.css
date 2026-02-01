@@ -1,4 +1,4 @@
-body {
+body * {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     background-color: #fceef5;
@@ -129,12 +129,7 @@ header {
     text-shadow: 0 0 5px #f8aab9;
 }
 
-button,
-.aboutme-button,
-.back-button,
-.nav-link {
-  cursor: url("assets/icons/donut_Normal.cur"), pointer;
-}
+
 
 
 
