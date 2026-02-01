@@ -9,6 +9,15 @@ body * {
     cursor: url("assets/icons/donut_Normal.cur"), auto;
 }
 
+button,
+a,
+.aboutme-button,
+.back-button,
+.nav-link {
+  cursor: url("assets/icons/donut_Normal.cur"), pointer;
+}
+
+
 @keyframes fadeInBody {
     from { opacity: 0; }
     to { opacity: 1; }
