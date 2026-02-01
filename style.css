@@ -25,6 +25,7 @@ a,
   cursor: url("assets/icons/donut_Normal.cur"), pointer;
 }
 
+
 @keyframes fadeInBody {
     from { opacity: 0; }
     to { opacity: 1; }
