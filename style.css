@@ -206,7 +206,7 @@ header {
     height: 70px;
     font-weight: bold;
     color: #a84a78;
-    cursor: pointer;
+    cursor: url("assets/icons/donut_Normal.cur"), pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: background-color 0.3s;
     display: flex;
