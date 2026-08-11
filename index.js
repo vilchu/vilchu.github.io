@@ -72,32 +72,81 @@ function fadeOut(element, callback) {
 
 // Switch to snippets page
 function goToSnippets() {
+  if (window.location.hash !== "#snippets") {
+    window.location.hash = "snippets";
+    return;
+  }
+
+  showSnippets();
+}
+
+function showSnippets(animate = true) {
   const home = document.getElementById("home");
   const snippets = document.getElementById("snippets");
   const backButton = document.getElementById("backButton");
 
-  fadeOut(home, () => {
+  const revealSnippets = () => {
     snippets.classList.remove("hidden");
     snippets.style.opacity = 0;
     setTimeout(() => {
       snippets.style.opacity = 1;
     }, 10);
     backButton.classList.remove("hidden");
-  });
+  };
+
+  if (home.classList.contains("hidden")) {
+    revealSnippets();
+  } else if (animate) {
+    fadeOut(home, revealSnippets);
+  } else {
+    home.classList.add("hidden");
+    revealSnippets();
+  }
 }
 
 // Switch back to home page
 function goBackHome() {
+  if (window.location.hash) {
+    window.location.hash = "";
+    return;
+  }
+
+  showHome();
+}
+
+function showHome(animate = true) {
   const home = document.getElementById("home");
   const snippets = document.getElementById("snippets");
   const backButton = document.getElementById("backButton");
 
-  fadeOut(snippets, () => {
+  const revealHome = () => {
     home.classList.remove("hidden");
     home.style.opacity = 0;
     setTimeout(() => {
       home.style.opacity = 1;
     }, 10);
     backButton.classList.add("hidden");
-  });
+  };
+
+  if (snippets.classList.contains("hidden")) {
+    revealHome();
+  } else if (animate) {
+    fadeOut(snippets, revealHome);
+  } else {
+    snippets.classList.add("hidden");
+    revealHome();
+  }
 }
+
+// Keep the visible page in sync with the URL so reload and browser navigation
+// restore the selected page.
+function showPageFromUrl(animate = true) {
+  if (window.location.hash === "#snippets") {
+    showSnippets(animate);
+  } else {
+    showHome(animate);
+  }
+}
+
+window.addEventListener("hashchange", () => showPageFromUrl());
+showPageFromUrl(false);
