@@ -107,7 +107,12 @@ function showSnippets(animate = true) {
 // Switch back to home page
 function goBackHome() {
   if (window.location.hash) {
-    window.location.hash = "";
+    window.history.pushState(
+      null,
+      "",
+      window.location.pathname + window.location.search
+    );
+    showHome();
     return;
   }
 
